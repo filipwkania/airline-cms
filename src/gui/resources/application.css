@@ -1,0 +1,45 @@
+.root {
+	/* Color for selected items */
+	-fx-accent: #B9E2FF;
+	
+	/* Color for focus */
+    -fx-focus-color: #0093FF;
+    
+	/* Inner border effect for buttons */
+    -fx-inner-border: linear-gradient(
+        to bottom,
+        ladder(-fx-color, 
+               derive(-fx-color,80%) 60%, 
+               white 82%) 0%,
+        ladder(-fx-color, 
+               derive(-fx-color,50%) 10%, 
+               derive(-fx-color,20%) 80%) 100%
+    );
+
+	/* Body color effect for components */
+	-fx-body-color: linear-gradient(
+        to bottom,
+        derive(-fx-color,45%) 0%,
+        derive(-fx-color,0%) 100%
+    );
+}
+
+/* Sets components roundness */
+.button, .toggle-button, .choice-box {
+    -fx-background-radius: 3, 3, 2, 1;
+}
+
+/* Sets focus effect size (first value) */
+.table-view:focused, .text-field:focused, .button:focused, .toggle-button:focused, .check-box:focused .box, .radio-button:focused .radio, .choice-box:focused, .menu-button:focused, .combo-box-base:focused {
+	-fx-background-insets: -0.5, 0, 1, 2;
+}
+
+/* Removes background color from scroll panes */
+.scroll-pane {
+	-fx-background-color: null;
+}
+
+/* Removes margin effect from selected cells */
+.cell:selected {
+	-fx-background-insets: null;
+}
